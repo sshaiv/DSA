@@ -1,8 +1,9 @@
+// 3. **Calculate the sum** of all elements in an array.
+       //  Example: `[1, 2, 3] → 6`
 
-// 1. **Find the maximum element** in an array.
-//    Example: `[2, 4, 1, 5, 3] → 5`
-   
-   
+
+
+  
 // #include <iostream>
 // #include <climits>
 // using namespace std;
@@ -21,15 +22,13 @@
         
 //     }
     
-//     int maxi=INT_MIN;
+//     int sum =0;
 //     for (int i=0; i<n;i++)
 //     {
-//         if(a[i]>maxi){
-//             maxi=a[i];
-//         }
+//         sum+=a[i];
 //       // cout<<a[i];
 //     }
-//     cout<<"maximum is:"<<maxi;
+//     cout<<"Sum of array  is:"<<sum;
     
 //     return 0;
 // }
@@ -49,14 +48,13 @@ int main() {
         a.push_back(num);
     }
 
-    int maxi = INT_MIN;
+    int sum = 0;
     for (int i = 0; i < a.size(); i++) {
-        if (a[i] > maxi) {
-            maxi = a[i];
-        }
+       sum+=a[i];
     }
 
-    cout << "Maximum is: " << maxi << endl;
+    cout << "Sum of array is: " << sum << endl;
 
     return 0;
 }
+      

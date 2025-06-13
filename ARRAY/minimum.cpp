@@ -1,3 +1,6 @@
+// 2. **Find the minimum element** in an array.
+//    Example: `[2, 4, 1, 5, 3] → 1`
+
 
 // #include <iostream>
 // #include <climits>
