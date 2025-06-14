@@ -3,42 +3,36 @@
 
 
 
-
 #include <iostream>
 #include <vector>
- #include <climits>
 using namespace std;
 
 int main() {
-   vector<int>a;
-   int num;
-   
-   cout<<"Enter element & stop upto 0: "<<endl;
-   while(cin>>num && num !=0){
-       a.push_back(num);
-   }
-   
-   
-   for(int i=0 ; i<a.size()/2;i++)
-{
-    
- swap(a[i], a[a.size() - i - 1]); 
-    
-}
-   
-cout<<"reverse : "<<" ";
-   for(int i=0 ; i<a.size();i++)
-{
-    
- cout<<a[i];
-    
-}
+    vector<int> a;
+    int num;
 
-cout<<endl;
+    cout << "Enter elements (end with 0): ";
+    while (cin >> num && num != 0) {
+        a.push_back(num);
+    }
 
-return 0;
+    int start = 0;
+    int end = a.size() - 1;
+
+    while (start < end) {
+        swap(a[start], a[end]);
+        start++;
+        end--;
+    }
+
+    cout << "Reversed array: ";
+    for (int i = 0; i < a.size(); i++) {
+        cout << a[i] << " ";
+    }
+
+    cout << endl;
+    return 0;
 }
-
 
 
 
@@ -47,42 +41,42 @@ return 0;
 
 
 // #include <iostream>
-// #include <vector>
-//  #include <climits>
 // using namespace std;
 
 // int main() {
-//    // vector<int>a;
-   
-//    int num, count=0;
-//    cout<<"num plz";
-//    cin>>num;
-   
-//    int a[num];
-   
-//    cout<<"Enter element & stop upto 0: "<<endl;
-//    while(cin>>num && num !=0){
-//       a[count]=num;
-//       count++;
-//    }
-   
-   
-//    for(int i=0 ; i<count/2;i++)
-// {
-    
-//  swap(a[i], a[count - i - 1]); 
-    
-// }
-   
-// cout<<"reverse : "<<" ";
-//    for(int i=0 ; i<count;i++)
-// {
-    
-//  cout<<a[i];
-    
-// }
+//     int size, num, count = 0;
 
-// cout<<endl;
+//     cout << "Enter maximum number of elements: ";
+//     cin >> size;
 
-// return 0;
+//     int a[size];
+
+//     cout << "Enter elements (end with 0): ";
+//     while (cin >> num && num != 0) {
+//         if (count < size) {
+//             a[count] = num;
+//             count++;
+//         } else {
+//             cout << "Array limit exceeded!" << endl;
+//             break;
+//         }
+//     }
+
+//     // Reverse using start and end pointers
+//     int start = 0;
+//     int end = count - 1;
+
+//     while (start < end) {
+//         swap(a[start], a[end]);
+//         start++;
+//         end--;
+//     }
+
+//     cout << "Reversed array: ";
+//     for (int i = 0; i < count; i++) {
+//         cout << a[i] << " ";
+//     }
+
+//     cout << endl;
+//     return 0;
 // }
